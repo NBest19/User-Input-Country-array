@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+					
+public class Program
+{
+	public static void Main()
+	{
+		List<string> Countries = new List<string>();
+		
+		//Client will have multiple inputs
+		
+		Console.WriteLine("Please enter a Country");
+		string UserInput = "";
+		
+		// Loop will carry on until condition Close is met 
+		
+	
+		while((UserInput = Console.ReadLine()) != string.Empty)
+		{
+			if(UserInput == "Close" || UserInput == "close")
+			{
+				Console.WriteLine("Your list is below");
+				break;
+			}
+		
+			Console.WriteLine("Adding to List " + UserInput);
+			Countries.Add(UserInput);
+		}
+		
+			Console.WriteLine("Diplaying your List");
+				Countries.Sort();
+		
+			foreach (string Country in Countries)
+			{
+				Console.WriteLine("Countries: " + Country);
+			}
+		}
+		
+}
